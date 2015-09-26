@@ -15,6 +15,8 @@
 		DC28F3AA1BB6DA1E0042D407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC28F3A81BB6DA1E0042D407 /* LaunchScreen.storyboard */; };
 		DC28F3B51BB6DA1E0042D407 /* HomeWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC28F3B41BB6DA1E0042D407 /* HomeWorkTests.m */; };
 		DC28F3C01BB6DA1E0042D407 /* HomeWorkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC28F3BF1BB6DA1E0042D407 /* HomeWorkUITests.m */; };
+		DC28F3D21BB6DA730042D407 /* ImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC28F3CF1BB6DA730042D407 /* ImagePickerManager.m */; settings = {ASSET_TAGS = (); }; };
+		DC28F3D31BB6DA730042D407 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DC28F3D11BB6DA730042D407 /* UIViewController+Category.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		DC28F3BB1BB6DA1E0042D407 /* HomeWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC28F3BF1BB6DA1E0042D407 /* HomeWorkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeWorkUITests.m; sourceTree = "<group>"; };
 		DC28F3C11BB6DA1E0042D407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC28F3CE1BB6DA730042D407 /* ImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerManager.h; sourceTree = "<group>"; };
+		DC28F3CF1BB6DA730042D407 /* ImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerManager.m; sourceTree = "<group>"; };
+		DC28F3D01BB6DA730042D407 /* UIViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
+		DC28F3D11BB6DA730042D407 /* UIViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		DC28F3991BB6DA1E0042D407 /* HomeWork */ = {
 			isa = PBXGroup;
 			children = (
+				DC28F3CD1BB6DA730042D407 /* Classes */,
 				DC28F39D1BB6DA1E0042D407 /* AppDelegate.h */,
 				DC28F39E1BB6DA1E0042D407 /* AppDelegate.m */,
 				DC28F3A01BB6DA1E0042D407 /* ViewController.h */,
@@ -138,6 +145,17 @@
 				DC28F3C11BB6DA1E0042D407 /* Info.plist */,
 			);
 			path = HomeWorkUITests;
+			sourceTree = "<group>";
+		};
+		DC28F3CD1BB6DA730042D407 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DC28F3CE1BB6DA730042D407 /* ImagePickerManager.h */,
+				DC28F3CF1BB6DA730042D407 /* ImagePickerManager.m */,
+				DC28F3D01BB6DA730042D407 /* UIViewController+Category.h */,
+				DC28F3D11BB6DA730042D407 /* UIViewController+Category.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +290,9 @@
 			files = (
 				DC28F3A21BB6DA1E0042D407 /* ViewController.m in Sources */,
 				DC28F39F1BB6DA1E0042D407 /* AppDelegate.m in Sources */,
+				DC28F3D31BB6DA730042D407 /* UIViewController+Category.m in Sources */,
 				DC28F39C1BB6DA1E0042D407 /* main.m in Sources */,
+				DC28F3D21BB6DA730042D407 /* ImagePickerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,10 +431,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = HomeWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dd.HomeWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c4c99acf-4f67-46fd-a288-32520590d94b";
 			};
 			name = Debug;
 		};
@@ -422,10 +444,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = HomeWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dd.HomeWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c4c99acf-4f67-46fd-a288-32520590d94b";
 			};
 			name = Release;
 		};

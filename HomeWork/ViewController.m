@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ImagePickerManager.h"
 
 @interface ViewController ()
 
@@ -17,11 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"A";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    //    B_VCViewController *c = [[B_VCViewController alloc] init];
+    //    [self.navigationController pushViewController:c animated:YES];
+    
+    [ImagePickerManager pickMediaWithMediaType:ImagePickerMediaTypeMovie sourceType:ImagePickerSourceTypeCamera rootViewController:self finishBlock:^(NSString * _Nullable filePath) {
+        //
+    }];
 }
 
 @end
